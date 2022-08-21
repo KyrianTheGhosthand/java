@@ -49,8 +49,9 @@ public class test {
 
 //            Part 4
 
-        int rd = rng.nextInt(1000);
-        System.out.printf("Part 4: The number that was generated: %d\n", rd);
+
+        System.out.println("Part 4: Insert the number:");
+        int rd = input.nextInt();
         int rds = 0;
         while (rd > 0) {
             int digit = rd % 10;
