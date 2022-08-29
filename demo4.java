@@ -5,7 +5,7 @@ public class demo4 {
     static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
-        Part2();
+        Part3();
     }
 
     public static void Part0(){
@@ -50,7 +50,36 @@ public class demo4 {
     }
 
     public static void Part3(){
-        String[] array1 = new String[]{“Python”, “JAVA”, “PHP”, “C#”, “C++”,“SQL”};
-        String[] array2 = {“MySQL”, “SQL”, “SQLite”, “Oracle”, “PostgreSQL”, “DB2”, “JAVA”};
+        String[] array1 = new String[]{"Python", "JAVA", "PHP", "C#", "C++", "SQL"};
+        String[] array2 = {"MySQL", "SQL", "SQLite", "Oracle", "PostgreSQL", "DB2", "JAVA"};
+        int n1 = array1.length ;
+        int n2 = array2.length;
+        System.out.println("Repeated elements: ");
+        for(int j = 0; j < n2; j++){
+            boolean eq = false;
+            for(int i = 0; i < n1; i++){
+                if(array1[i] == array2[j]){
+                    eq = true;
+                    break;
+                }
+            }
+            if(eq == true){
+                System.out.println(array2[j]);
+                break;
+            }
+        }
+        for(int i = 0; i < n1; i++){
+            boolean eq = false;
+            for(int j = 0; j < n2; j++){
+                if(array1[i] == array2[j]){
+                    eq = true;
+                    break;
+                }
+            }
+            if(eq == true){
+                System.out.println(array1[i]);
+                break;
+            }
+        }
     }
 }
