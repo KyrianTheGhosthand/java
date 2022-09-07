@@ -2,11 +2,14 @@ import java.util.*;
 
 public class Engineer extends Employee{
     private String degree;
-    public Engineer(){}
+    public Engineer(){
+        Scanner input = new Scanner(System.in);
+        System.out.println("Insert degree: ");
+        this.degree = input.nextLine();
+    }
 
     public Engineer(String name, int age, String gender, String address) {
         super(name, age, gender, address);
-        this.degree = degree;
     }
     public String getDegree() {
         return degree;

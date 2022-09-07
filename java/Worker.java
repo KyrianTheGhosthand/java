@@ -1,11 +1,14 @@
+import java.util.Scanner;
+
 public class Worker extends Employee{
     private int level;
     public Worker(){
-
+        Scanner input = new Scanner(System.in);
+        System.out.println("Insert level: ");
+        this.level = input.nextInt();
     }
     public Worker(String name, int age, String gender, String address) {
         super(name, age, gender, address);
-        this.level = level;
     }
 
     public int getLevel() {

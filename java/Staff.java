@@ -1,12 +1,15 @@
+import java.util.Scanner;
+
 public class Staff extends Employee {
     private String job;
     public Staff(){
-
+        Scanner input = new Scanner(System.in);
+        System.out.println("Insert Occupation: ");
+        this.job = input.nextLine();
     }
     public Staff(String name, int age, String gender, String address) {
 
         super(name, age, gender, address);
-        this.job = job;
     }
     public String getJob(){
         return job;
