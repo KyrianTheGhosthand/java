@@ -5,13 +5,26 @@ public class Account implements IAccount {
     private String accountNumber;
     private String email;
     private double accountBalance;
+
+    private String password;
     public Account(){}
-    public Account(String name, String accountNumber, String email, double accountBalance) {
+
+
+    public Account(String name, String accountNumber, String email, double accountBalance, String password) {
         this.name = name;
         this.accountNumber = accountNumber;
         this.email = email;
         this.accountBalance = accountBalance;
+        this.password = password;
     }
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
 
     public String getName() {
         return name;
@@ -85,6 +98,16 @@ public class Account implements IAccount {
                 System.out.println("New account balance: " +a.getAccountBalance());
             }else System.out.println("No email found!");
             return;
+        }
+    }
+    public void check(String name, String password){
+        for(Account a: newAccount){
+            if(a.getName().matches(name) && a.getPassword().matches(password)){
+                System.out.println("Login success");
+                continue;
+            }
+            else System.out.println("Login Failed");
+            break;
         }
     }
 }
